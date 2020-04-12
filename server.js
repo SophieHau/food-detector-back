@@ -6,6 +6,8 @@ const bcrypt = require('bcrypt-nodejs');
 const Clarifai = require('clarifai');
 
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 const api = new Clarifai.App({
     apiKey: process.env.CLARIFAI_API_KEY
    });
